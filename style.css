@@ -57,3 +57,10 @@ body {
 #buttons i:hover {
   background: rgb(183, 205, 212);
 }
+
+@media (max-width: 667px) {
+  #stopWatch {
+    width: 300px;
+    margin-top: 45px;
+  }
+}
