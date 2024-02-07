@@ -28,6 +28,13 @@ body {
   align-items: center;
 }
 
+#timeHolder span {
+  position: relative;
+  font-size: 13px;
+  bottom: -4px;
+  right: -4px;
+}
+
 #buttons {
   display: flex;
   gap: 15px;
