@@ -53,6 +53,7 @@ function stopWatch() {
   } else {
     ms = millisecond;
   }
+
   // timeHolder.innerHTML = `0${hours}:0${minutes}:0${seconds}`;
   let ot = (millisecondInput.innerHTML = ms);
   timeHolder.innerHTML = h + ':' + m + ':' + s;
