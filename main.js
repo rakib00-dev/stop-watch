@@ -45,14 +45,18 @@ function stopWatch() {
   // let s = seconds < 10 ? '0' + seconds : seconds;
   let ms;
   if (millisecond < 10) {
+    ms = '000' + millisecond;
+  } else if (millisecond < 100) {
+    ms = '00' + millisecond;
+  } else if (millisecond < 1000) {
     ms = '0' + millisecond;
   } else {
     ms = millisecond;
   }
-
   // timeHolder.innerHTML = `0${hours}:0${minutes}:0${seconds}`;
-  timeHolder.innerHTML = h + ':' + m + ':' + s + ':' + ms;
-  millisecondInput.innerHTML = ms;
+  let ot = (millisecondInput.innerHTML = ms);
+  timeHolder.innerHTML = h + ':' + m + ':' + s;
+  millisecondInput.innerHTML = ot;
 }
 
 function watchStarter() {
@@ -70,4 +74,5 @@ function watchReseter() {
   clearInterval(timer);
   [millisecond, seconds, minutes, hours] = [0, 0, 0, 0];
   timeHolder.innerHTML = '00:00:00';
+  millisecondInput.innerHTML = '000';
 }

@@ -11,7 +11,12 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+#wrapper {
+  width: 100%;
+}
+
 #stopWatch {
+  position: relative;
   height: 200px;
   width: 400px;
   background-color: #d5dfde;
@@ -28,11 +33,17 @@ body {
   align-items: center;
 }
 
-#timeHolder span {
-  position: relative;
-  font-size: 13px;
-  bottom: -4px;
-  right: -4px;
+span#millisecond {
+  position: absolute;
+  font-size: 14px;
+  font-weight: 700;
+  padding-top: 30px;
+  transform: translate(-50%, -50%);
+  left: 296px;
+  top: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #buttons {
@@ -69,5 +80,9 @@ body {
   #stopWatch {
     width: 300px;
     margin-top: 45px;
+  }
+
+  span#millisecond {
+    left: 250px;
   }
 }
