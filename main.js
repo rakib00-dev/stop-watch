@@ -1,11 +1,11 @@
 let timeHolder = document.getElementById('timeHolder');
 let millisecondInput = document.getElementById('millisecond');
-let [seconds, minutes, hours, millisecond] = [0, 0, 0, 0];
+let [millisecond, seconds, minutes, hours] = [0, 0, 0, 0];
 let timer = 0;
 
 function stopWatch() {
-  millisecond++;
-  if (millisecond == 1) {
+  millisecond += 10;
+  if (millisecond == 1000) {
     millisecond = 0;
     seconds++;
     if (seconds == 60) {
@@ -51,7 +51,7 @@ function stopWatch() {
   }
 
   // timeHolder.innerHTML = `0${hours}:0${minutes}:0${seconds}`;
-  timeHolder.innerHTML = h + ':' + m + ':' + s;
+  timeHolder.innerHTML = h + ':' + m + ':' + s + ':' + ms;
   millisecondInput.innerHTML = ms;
 }
 
@@ -59,7 +59,7 @@ function watchStarter() {
   if (timer != null) {
     clearInterval(timer);
   }
-  timer = setInterval(stopWatch, 1000);
+  timer = setInterval(stopWatch, 10);
 }
 
 function watchStoper() {
@@ -68,6 +68,6 @@ function watchStoper() {
 
 function watchReseter() {
   clearInterval(timer);
-  [seconds, minutes, hours] = [0, 0, 0];
+  [millisecond, seconds, minutes, hours] = [0, 0, 0, 0];
   timeHolder.innerHTML = '00:00:00';
 }
