@@ -47,8 +47,13 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 #buttons #btn2 i {
   font-size: 20px;
+}
+
+#buttons i:hover {
+  background: rgb(183, 205, 212);
 }
