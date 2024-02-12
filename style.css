@@ -76,6 +76,10 @@ span#millisecond {
   background: rgb(183, 205, 212);
 }
 
+#buttons i:active {
+  background: rgb(197, 219, 226);
+}
+
 @media (max-width: 667px) {
   #stopWatch {
     width: 300px;
